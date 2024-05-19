@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    /* color: #fff; */
+    overflow-x: hidden; /* Prevent horizontal scrollbar on the body */
+}
+
+#about{
+    background-color: lightcyan;
+}
+#education{
+    background-color: beige;
+}
+#projects{
+    background-color: honeydew;
+}
+#contact{
+    background-color: lavender;
+}
+#footer{
+    color: brown;
+    text-align: center;
+    font-weight: bold;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+}
+
+#profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    animation: slideDown 1s ease-in-out;
+}
+
+.header-text {
+    margin-top: 20px;
+}
+/* .header-text h1 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #4CAF50;
+    padding: 10px;
+    z-index: 1000;
+    margin: 0;
+} */
+
+#name {
+    animation: typing 3s steps(22) 1s 1 normal both, blink .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#name-container {
+    overflow-x: hidden; /* Prevent horizontal scrollbar on the container */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: auto }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+nav {
+    background-color: #333;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#typed-text {
+    font-family: Arial, sans-serif;
+    display: inline;
+}
+
+#cursor {
+    display: inline;
+    font-weight: bold;
+    animation: blink 0.7s infinite;
+}
+
+
+/* Pin header name when scrolling */
+.header-text h1 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #4CAF50;
+    padding: 10px;
+    z-index: 1000;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-text {
+        margin-left: 0;
+    }
+    nav ul li {
+        display: block;
+        text-align: left;
+    }
+    form {
+        width: 100%;
+    }
+    #profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+}
