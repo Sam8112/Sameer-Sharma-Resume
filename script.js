@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add scroll animations
     const sections = document.querySelectorAll('section');
     const options = {
-        threshold: 0.1
+        // threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
