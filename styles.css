@@ -38,7 +38,7 @@ header {
     height: 150px;
     object-fit: cover;
     border: 5px solid white;
-    animation: slideDown 1s ease-in-out;
+    animation: fadeInFromTop 1s ease-in-out;
 }
 
 .header-text {
@@ -146,6 +146,40 @@ section {
         opacity: 1;
     }
 }
+.social-links a {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+#profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    animation: fadeInFromTop 1s ease-in-out;
+}
+
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 #typed-text {
     font-family: Arial, sans-serif;
