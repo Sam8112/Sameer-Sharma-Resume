@@ -225,3 +225,18 @@ section {
         height: 100px;
     }
 }
+
+.social-links a {
+    margin-right: 10px;
+    text-decoration: none; /* Removes the underline */
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
